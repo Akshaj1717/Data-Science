@@ -14,6 +14,11 @@ print(df['possession team1'].head())
 """
 
 #cleaning
+df['possession team1'] = df['possession team1'].str.replace('%', '', regex=True)
+df['possession team2'] = df['possession team2'].str.replace('%', '', regex=True)
+df['possession in contest'] = df['possession in contest'].str.replace('%', '', regex=True)
+df = df.astype({'possession team1': 'int', 'possession team2': 'int', 'possession in contest': 'int'})
+
 print(df.info()) #index 50 and 54 have spacing issue, 25-27 have spacing issue
 df.columns.str.strip("'").str.strip()
 df.columns = df.columns.str.replace(r'\s+', ' ', regex=True)
