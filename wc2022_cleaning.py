@@ -26,5 +26,6 @@ df.rename(columns={'completed line breaksteam1': 'completed line breaks team1',
                    'completed defensive line breaksteam1': 'completed defensive line breaks team1'},
           inplace=True)
 print(df.columns.tolist())
+df.to_csv('wc2022_cleaned.csv', index=False)
 
 
