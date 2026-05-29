@@ -28,4 +28,3 @@ df.rename(columns={'completed line breaksteam1': 'completed line breaks team1',
 print(df.columns.tolist())
 
 
-
